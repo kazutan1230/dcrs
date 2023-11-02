@@ -1,0 +1,21 @@
+services:
+  next:
+    container_name: next
+    build: .
+    image: next
+    environment:
+      VIRTUAL_HOST: ${DOMAIN}
+      LETSENCRYPT_HOST: ${DOMAIN}
+    volumes:
+      - ./next/app:/home/bun/app/next/app
+      - ./next/public:/home/bun/app/next/public
+    restart: always
+    command: bun --bun run start
+    ports:
+      - 80:3000
+
+networks:
+  default:
+    name: TNA
+    driver: bridge
+    external: true
