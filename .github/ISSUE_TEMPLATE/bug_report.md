@@ -1,17 +1,9 @@
 ---
-name: Bug report
+name: 🐛 Bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
 assignees: ''
-
----
-
----
-name: "🐛 Bug Report"
-about: Report a reproducible bug or regression.
-title: 'Bug: '
-labels: 'Status: Unconfirmed'
 
 ---
 
