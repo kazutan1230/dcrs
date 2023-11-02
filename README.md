@@ -12,6 +12,9 @@ $ git clone https://github.com/OpenUp-LabTakizawa/TNA
 # Go into the repository
 $ cd TNA
 
+# Create TNA docker network
+$ docker network create TNA
+
 # Run the app
 $ docker compose -f compose.prod.yml up -d
 
