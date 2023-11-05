@@ -3,29 +3,26 @@ Time and Management System
 
 ## Usage
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Bun](https://bun.sh/) and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Bun](https://bun.sh/) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/OpenUp-LabTakizawa/TNA
+$ git clone https://github.com/OpenUp-LabTakizawa/tna
 
 # Install dependencies with bun
-$ cd TNA/next && bun i
+$ cd tna && bun i
 
-# Go into the TNA workspace
-$ cd ..
+# Develop the app
+$ bun --bun run dev
 
-# Create TNA docker network
-$ docker network create TNA
+# Build the app
+$ bun --bun run build
 
-# Run the app
-$ docker compose -f compose.prod.yml up -d
+# Start the app
+$ bun --bun run start
 
-# Stop the app
-$ docker compose down
-
-# Run the app under watch mode
-$ docker compose watch
+# Format the app
+$ bun --bun run lint
 ```
 
 ## Credits
@@ -33,7 +30,6 @@ $ docker compose watch
 This software uses the following open source packages:
 
 - [Bun](https://bun.sh/)
-- [Docker](https://www.docker.com/)
 - [Next.js](https://nextjs.org/)
 - [Node.js](https://nodejs.org/)
 - [React](https://react.dev/)
@@ -41,4 +37,4 @@ This software uses the following open source packages:
 ## License
 
 The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).
-Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/TNA/blob/main/LICENSE) for more details.
+Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/tna/blob/main/LICENSE) for more details.
