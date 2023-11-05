@@ -3,14 +3,17 @@ Time and Management System
 
 ## Usage
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com), [Bun](https://bun.sh/) and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
 $ git clone https://github.com/OpenUp-LabTakizawa/TNA
 
-# Go into the repository
-$ cd TNA
+# Install dependencies with bun
+$ cd TNA/next && bun i
+
+# Go into the TNA workspace
+$ cd ..
 
 # Create TNA docker network
 $ docker network create TNA
