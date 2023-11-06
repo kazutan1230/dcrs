@@ -32,6 +32,7 @@ jobs:
     
     - name: cache-node-modules
       uses: actions/cache@v3
+      id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
         key: node-cache-${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
