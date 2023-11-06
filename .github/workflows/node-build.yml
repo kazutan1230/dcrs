@@ -32,7 +32,6 @@ jobs:
     
     - name: cache-node-modules
       uses: actions/cache@v3
-      id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
         key: node-cache-${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -40,7 +39,6 @@ jobs:
           node-cache-${{ runner.os }}-yarn-
     
     - name: Install dependencies
-      if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
       run: yarn --frozen-lockfile
     
     - name: Format app
