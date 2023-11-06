@@ -31,7 +31,6 @@ jobs:
       run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
     
     - name: cache-node-modules
-      id: yarn-cache
       uses: actions/cache@v3
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -40,7 +39,6 @@ jobs:
           ${{ runner.os }}-yarn-
     
     - name: Install dependencies
-      if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
       run: yarn --frozen-lockfile
     
     - name: Format app
