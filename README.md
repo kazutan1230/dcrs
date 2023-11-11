@@ -20,7 +20,7 @@
   </a>
 </p>
 <p align="center">
-  Time and Management System  
+  Time and Attendance System  
 </p>
 
 ## Usage
