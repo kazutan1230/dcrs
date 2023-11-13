@@ -21,6 +21,8 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions: read-all
+
 env:
   REGISTRY: docker.io
   DOCKER_USER: ${{ secrets.DOCKER_USER }}
