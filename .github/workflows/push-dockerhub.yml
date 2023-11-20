@@ -24,7 +24,6 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: marukome0743/tna
-  SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
   
 jobs:
   build:
@@ -34,8 +33,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ env.SHA }}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -51,15 +48,12 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          labels: |
-            org.opencontainers.image.revision=${{ env.SHA }}
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           platforms: linux/amd64,linux/arm64
-          load: ${{ github.event_name == 'pull_request_target' && github.repository_owner == 'OpenUp-LabTakizawa' }}
-          push: ${{ github.event_name != 'pull_request_target' && github.repository_owner == 'OpenUp-LabTakizawa' }}
+          push: ${{ github.repository_owner == 'OpenUp-LabTakizawa' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
