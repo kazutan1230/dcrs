@@ -25,7 +25,8 @@
 
 ## ⚒️ Usage
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Bun](https://bun.sh/) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Bun](https://bun.sh/) installed on your computer.  
+From your command line:
 
 ```bash
 # Clone this repository
@@ -63,5 +64,5 @@ This software uses the following open source packages:
 
 ## 📄 License
 
-The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).
+The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).  
 Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/tna/blob/main/LICENSE) for more details.
