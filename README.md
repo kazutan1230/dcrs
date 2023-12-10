@@ -9,6 +9,9 @@
   <a aria-label="react" href="https://react.dev/">
     <img src="https://img.shields.io/badge/-react-61DAFB.svg?logo=react&style=for-the-badge&labelColor=000000" alt="react">
   </a>
+  <a aria-label="tailwindcss" href="https://tailwindcss.com/">
+    <img src="https://img.shields.io/badge/-tailwindcss-06B6D4.svg?logo=tailwindcss&style=for-the-badge&labelColor=000000" alt="tailwindcss">
+  </a>
   <a aria-label="typescript" href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/-TypeScript-3178C6.svg?logo=typescript&style=for-the-badge&labelColor=000000" alt="typescript">
   </a>
