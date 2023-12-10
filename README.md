@@ -10,13 +10,13 @@
     <img src="https://img.shields.io/badge/-react-61DAFB.svg?logo=react&style=for-the-badge&labelColor=000000" alt="react">
   </a>
   <a aria-label="tailwindcss" href="https://tailwindcss.com/">
-    <img src="https://img.shields.io/badge/-tailwindcss-06B6D4.svg?logo=tailwindcss&style=for-the-badge&labelColor=000000" alt="tailwindcss">
+    <img src="https://img.shields.io/badge/-tailwind css-06B6D4.svg?logo=tailwindcss&style=for-the-badge&labelColor=000000" alt="tailwindcss">
   </a>
   <a aria-label="typescript" href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/-TypeScript-3178C6.svg?logo=typescript&style=for-the-badge&labelColor=000000" alt="typescript">
   </a>
   <a aria-label="vscode" href="https://code.visualstudio.com/">
-    <img src="https://img.shields.io/badge/-visual%20studio%20code-007ACC.svg?logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="vscode">
+    <img src="https://img.shields.io/badge/-visual studio code-007ACC.svg?logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="vscode">
   </a>
   <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/tna/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/tna?style=for-the-badge&labelColor=000000" alt="License">
