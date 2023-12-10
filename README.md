@@ -48,7 +48,7 @@ $ bun --bun run build
 $ bun --bun run start
 
 # Format the app
-$ bun --bun run lint
+$ bunx @biomejs/biome check --apply-unsafe **
 ```
 
 ## ✍️ VSCode
@@ -76,10 +76,12 @@ by automatically forking the project and prompting to send a pull request too.
 
 This software uses the following open source packages:
 
+- [Biome](https://biomejs.dev/)
 - [Bun](https://bun.sh/)
 - [Next.js](https://nextjs.org/)
 - [Node.js](https://nodejs.org/)
 - [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## 📄 License
 
