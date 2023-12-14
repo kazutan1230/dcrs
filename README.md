@@ -18,8 +18,8 @@
   <a aria-label="vscode" href="https://code.visualstudio.com/">
     <img src="https://img.shields.io/badge/-visual studio code-007ACC.svg?logo=visualstudiocode&style=for-the-badge&labelColor=000000" alt="vscode">
   </a>
-  <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/tna/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/tna?style=for-the-badge&labelColor=000000" alt="License">
+  <a aria-label="License" href="https://github.com/OpenUp-LabTakizawa/dcrs/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/OpenUp-LabTakizawa/dcrs?style=for-the-badge&labelColor=000000" alt="License">
   </a>
 </p>
 <p align="center">
@@ -33,10 +33,10 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/OpenUp-LabTakizawa/tna
+$ git clone https://github.com/OpenUp-LabTakizawa/dcrs
 
 # Install dependencies with bun
-$ cd tna && bun i
+$ cd dcrs && bun i
 
 # Develop the app
 $ bun --bun run dev
@@ -86,4 +86,4 @@ This software uses the following open source packages:
 ## 📄 License
 
 The Apache License Version 2.0 (2023) - [OpenUp-LabTakizawa](https://github.com/OpenUp-LabTakizawa).  
-Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/tna/blob/main/LICENSE) for more details.
+Please have a look at the [LICENSE](https://github.com/OpenUp-LabTakizawa/dcrs/blob/main/LICENSE) for more details.
