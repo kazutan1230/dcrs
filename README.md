@@ -1,4 +1,4 @@
-<h1 align="center">tna</h1>
+<h1 align="center">dcrs</h1>
 <p align="center">
   <a aria-label="bun" href="https://bun.sh/">
     <img src="https://img.shields.io/badge/-Bun-FBF0DF.svg?logo=bun&style=for-the-badge&labelColor=000000" alt="bun">
@@ -23,7 +23,7 @@
   </a>
 </p>
 <p align="center">
-  Time and Attendance System🕰️
+  Disability Certificate Register System📇
 </p>
 
 ## ⚒️ Usage
