@@ -66,13 +66,13 @@ We understand that sometimes it might be hard to extract essential bits of code 
 
 Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
-You can use our [issue templates](https://github.com/OpenUp-LabTakizawa/dcrs/tree/main/.github/ISSUE_TEMPLATE) and filling out the issue template.
+You can use our [issue templates][issue-template] and filling out the issue template.
 
 ### Submitting a Pull Request (PR)
 
 Here’s how we suggest you go about proposing a change to this project:
 
-1. Search [Pull requests](https://github.com/OpenUp-LabTakizawa/dcrs/pulls) for an open or closed PR that relates to your submission.  You don't want to duplicate existing efforts.
+1. Search [Pull requests][dcrs-pr] for an open or closed PR that relates to your submission.  You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
 
@@ -203,7 +203,9 @@ Similarly, a Deprecation section should start with "DEPRECATED: " followed by a 
 [branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
 [coc]: https://github.com/OpenUp-LabTakizawa/dcrs/blob/main/CODE_OF_CONDUCT.md
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
+[dcrs-pr]: https://github.com/OpenUp-LabTakizawa/dcrs/pulls
 [discord]: https://discord.gg/tSHMqK8VDU
 [fork]: https://help.github.com/articles/fork-a-repo/
+[issue-template]: https://github.com/OpenUp-LabTakizawa/dcrs/tree/main/.github/ISSUE_TEMPLATE
 [pr]: https://help.github.com/articles/using-pull-requests/
 [so]: https://stackoverflow.com
