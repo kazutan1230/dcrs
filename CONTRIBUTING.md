@@ -31,12 +31,12 @@ If you would like to chat about the question in real-time, you can reach out via
 
 ## 🐛Issues and Bugs
 
-If you find a bug in the source code, you can help us by [submitting an issue](#submit-issue).  
-Even better, you can [submit a Pull Request](#submit-pr) with a fix.
+If you find a bug in the source code, you can help us by [submitting an issue](#submitting-an-issue).  
+Even better, you can [submit a Pull Request](#submitting-a-pull-request-pr) with a fix.
 
 ## 🚀Feature Requests
 
-You can *request* a new feature by [submitting an issue](#submit-issue).  
+You can *request* a new feature by [submitting an issue](#submitting-an-issue).  
 If you would like to *implement* a new feature, please consider the size of the change in order to determine the right steps to proceed:
 
 * For a **Major Feature**, first open an issue and outline your proposal so that it can be discussed.  
@@ -45,7 +45,7 @@ If you would like to *implement* a new feature, please consider the size of the 
 > [!NOTE]
 > Adding a new topic to the documentation, or significantly re-writing a topic, counts as a major feature.
 
-* **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+* **Small Features** can be crafted and directly [submitted as a Pull Request](#submitting-a-pull-request-pr).
 
 ## 🎫Submission Guidelines
 
