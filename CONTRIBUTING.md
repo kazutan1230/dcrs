@@ -1,6 +1,6 @@
 # 🫶Contributing Guidelines
 
-We would love for you to contribute and help make it even better than it is today!
+We would love for you to contribute and help make it even better than it is today!  
 As a contributor, here are the guidelines we would like you to follow:
 
  - [🤝Code of Conduct](#code-of-conduct)
@@ -8,7 +8,7 @@ As a contributor, here are the guidelines we would like you to follow:
  - [🐛Issues and Bugs](#issues-and-bugs)
  - [🚀Feature Requests](#feature-requests)
  - [🎫Submission Guidelines](#submission-guidelines)
- - [🖊️Commit Message Format](#commit-message-format)
+ - [📃Commit Message Format](#commit-message-format)
 
 ## 🤝Code of Conduct
 
@@ -84,7 +84,7 @@ Here’s how we suggest you go about proposing a change to this project:
 
 6. [Send a pull request][pr] from your fork’s branch to our `main` branch.
 
-## 🖊️Commit Message Format
+## 📃Commit Message Format
 
 *This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
 
