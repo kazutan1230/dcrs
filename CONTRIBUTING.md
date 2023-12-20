@@ -84,6 +84,9 @@ Here’s how we suggest you go about proposing a change to this project:
 
 6. [Send a pull request][pr] from your fork’s branch to our `main` branch.
 
+Using the web-based interface to make changes is fine too, and will help you
+by automatically forking the project and prompting to send a pull request too.
+
 ## 📃Commit Message Format
 
 *This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
