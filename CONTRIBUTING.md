@@ -8,7 +8,7 @@ As a contributor, here are the guidelines we would like you to follow:
  - [🐛Issues and Bugs](#issues-and-bugs)
  - [🚀Feature Requests](#feature-requests)
  - [🎫Submission Guidelines](#submission-guidelines)
- - [✏️Commit Message Format](#commit-message-format)
+ - [🖊️Commit Message Format](#commit-message-format)
 
 ## 🤝Code of Conduct
 
@@ -31,7 +31,7 @@ If you would like to chat about the question in real-time, you can reach out via
 
 ## 🐛Issues and Bugs
 
-If you find a bug in the source code, you can help us by [submitting an issue](#submit-issue).
+If you find a bug in the source code, you can help us by [submitting an issue](#submit-issue).  
 Even better, you can [submit a Pull Request](#submit-pr) with a fix.
 
 ## 🚀Feature Requests
@@ -84,7 +84,7 @@ Here’s how we suggest you go about proposing a change to this project:
 
 6. [Send a pull request][pr] from your fork’s branch to our `main` branch.
 
-## ✏️Commit Message Format
+## 🖊️Commit Message Format
 
 *This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
 
