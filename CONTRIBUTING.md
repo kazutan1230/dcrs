@@ -1,33 +1,32 @@
-# 🫶Contributing to dcrs
+# 🫶Contributing Guidelines
 
 We would love for you to contribute and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
- - [🤝Code of Conduct](#🤝code-of-conduct)
- - [🗳️Question or Problem?](#🗳️question-or-problem)
- - [🐛Issues and Bugs](#🐛issues-and-bugs)
- - [🚀Feature Requests](#🚀feature-requests)
- - [🈂️Submission Guidelines](#🈂️submission-guidelines)
- - [🖋️Commit Message Format](#🖋️commit-message-format)
+ - [🤝Code of Conduct](#code-of-conduct)
+ - [🔎Question or Problem?](#question-or-problem)
+ - [🐛Issues and Bugs](#issues-and-bugs)
+ - [🚀Feature Requests](#feature-requests)
+ - [🎫Submission Guidelines](#submission-guidelines)
+ - [✏️Commit Message Format](#commit-message-format)
 
 ## 🤝Code of Conduct
 
 Help us keep dcrs open and inclusive.  
 Please read and follow our [Code of Conduct][coc].
 
-## 🗳️Question or Problem?
+## 🔎Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests.  
-Instead, we recommend using [Stack Overflow](https://stackoverflow.com) to ask support-related questions.
+Instead, we recommend using [Stack Overflow][so] to ask support-related questions.
 
-[Stack Overflow](https://stackoverflow.com) is a much better place to ask questions since:
+[Stack Overflow][so] is a much better place to ask questions since:
 
-- there are thousands of people willing to help on [Stack Overflow](https://stackoverflow.com)
+- there are thousands of people willing to help on [Stack Overflow][so]
 - questions and answers stay available for public viewing so your question/answer might help someone else
-- [Stack Overflow](https://stackoverflow.com)'s voting system assures that the best answers are prominently visible.
+- [Stack Overflow][so]'s voting system assures that the best answers are prominently visible.
 
-To save your and our time, we will systematically close all issues that are requests for general support and redirect people to [Stack Overflow](https://stackoverflow.com).
-
+To save your and our time, we will systematically close all issues that are requests for general support and redirect people to [Stack Overflow][so].  
 If you would like to chat about the question in real-time, you can reach out via [our Discord server][discord].
 
 ## 🐛Issues and Bugs
@@ -48,7 +47,7 @@ If you would like to *implement* a new feature, please consider the size of the 
 
 * **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
 
-## 🈂️Submission Guidelines
+## 🎫Submission Guidelines
 
 ### Submitting an Issue
 
@@ -85,7 +84,7 @@ Here’s how we suggest you go about proposing a change to this project:
 
 6. [Send a pull request][pr] from your fork’s branch to our `main` branch.
 
-## 🖋️Commit Message Format
+## ✏️Commit Message Format
 
 *This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
 
@@ -207,3 +206,4 @@ Similarly, a Deprecation section should start with "DEPRECATED: " followed by a 
 [discord]: https://discord.gg/tSHMqK8VDU
 [fork]: https://help.github.com/articles/fork-a-repo/
 [pr]: https://help.github.com/articles/using-pull-requests/
+[so]: https://stackoverflow.com
