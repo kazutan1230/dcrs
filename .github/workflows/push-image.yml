@@ -86,5 +86,6 @@ jobs:
         uses: docker/scout-action@v1
         with:
           command: compare
+          image: ${{ env.REPOSITORY }}:${{ steps.meta.outputs.version }}
           to-latest: true
           only-severities: critical,high
