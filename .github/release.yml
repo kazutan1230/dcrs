@@ -1,0 +1,19 @@
+changelog:
+  categories:
+    - title: 🚀 Exciting New Features
+      labels:
+        - content
+        - enhancement
+        - javascript
+    - title: 🐛 Bug Fixes
+      labels:
+        - bug
+    - title: 📖 Documentation
+      labels:
+        - documentation
+    - title: 🆙 Version Up
+      labels:
+        - dependencies
+    - title: 🧰 Maintenance
+      labels:
+        - "*"
