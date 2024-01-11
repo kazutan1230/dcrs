@@ -14,7 +14,23 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+<<<<<<< HEAD
             By OpenUpラボ滝沢
+=======
+<<<<<<< HEAD
+            By{' '}
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
+              priority={true}
+            />
+=======
+            By OpenUpラボ滝沢
+>>>>>>> 6b69ba7 (updateForm added.)
+>>>>>>> 4329dc5 (updateForm added.)
           </a>
         </div>
       </div>
