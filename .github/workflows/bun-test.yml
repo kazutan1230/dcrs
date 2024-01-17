@@ -6,41 +6,38 @@ concurrency:
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
     paths:
       - "app/**"
       - "public/**"
-      - "next.config.js"
+      - "bun.lockb"
       - "package.json"
-      - "postcss.config.js"
-      - "tailwind.config.ts"
-      - "tsconfig.json"
       - "yarn.lock"
+      - "*config.*"
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
     paths:
       - "app/**"
       - "public/**"
-      - "next.config.js"
+      - "bun.lockb"
       - "package.json"
-      - "postcss.config.js"
-      - "tailwind.config.ts"
-      - "tsconfig.json"
       - "yarn.lock"
+      - "*config.*"
   workflow_dispatch:
 
 jobs:
-  build:
-    name: tests
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install bun
         uses: oven-sh/setup-bun@v1
 
       - name: Install dependencies
         run: bun i
+
       - name: Test app
         run: bun test
