@@ -4,7 +4,6 @@ import UploadForm_hook from '@/components/uploadForm_hook'
 
 export default function Upload() {
 
-
   return (
     <main className="flex min-h-screen flex-col p-24">
 
