@@ -7,7 +7,15 @@ const UploadForm: FC = () => (
     <p className="mb-3 text-2xl font-semibold">アップロードフォーム</p>
     <form>
         <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div>
+=======
+        <div>
+>>>>>>> 4329dc5 (updateForm added.)
+=======
+            <div>
+>>>>>>> a5d1fc6 (uploadForm hook ver. added.)
                 <p >お名前</p>
                 <p className="text-red-500">必須</p>
             </div>
@@ -33,6 +41,20 @@ const UploadForm: FC = () => (
             </div>
 
             <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <p >社員番号</p>
+                <p className="text-red-500">必須</p>
+            </div>
+            <div className="ml-5">
+                <p><input type="text" required /></p>
+            </div>
+
+            <div>
+>>>>>>> 4329dc5 (updateForm added.)
+=======
+>>>>>>> a5d1fc6 (uploadForm hook ver. added.)
                 <p >連絡可能な個人電話番号</p>
                 <p className="text-red-500">必須</p>
             </div>
