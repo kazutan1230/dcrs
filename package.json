@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "bunx @biomejs/biome check --apply ."
   },
   "dependencies": {
-    "next": "^14.0.4",
+    "next": "^14.1.0",
     "react": "canary",
     "react-dom": "canary",
     "react-hook-form": "^7.49.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.2",
-    "@types/bun": "^1.0.2",
+    "@types/bun": "^1.0.3",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
