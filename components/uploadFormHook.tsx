@@ -30,17 +30,16 @@ export const UploadFormHook: FC = () => {
         <div>
           <div className="mb-5">
             <p>お名前</p>
-            <p className="text-red-500">必須</p>
             <input
               {...register('name')}
               placeholder="オープン太郎"
               required={true}
             />
+            <label />
           </div>
 
           <div className="mb-5">
             <p>所属会社</p>
-            <p className="text-red-500">必須</p>
             {/* フォームのサイズを調整すべき */}
             {/* <input {...register('company')} placeholder="株式会社オープンアップグループ" required /> */}
             <input
@@ -48,43 +47,44 @@ export const UploadFormHook: FC = () => {
               placeholder="オープンアップグループ"
               required={true}
             />
+            <label />
           </div>
 
           <div className="mb-5">
             <p>社員番号</p>
-            <p className="text-red-500">必須</p>
             <input
               {...register('employeeId')}
               placeholder="123456"
               required={true}
             />
+            <label />
           </div>
 
           <div className="mb-5">
             <p>連絡可能な個人電話番号</p>
-            <p className="text-red-500">必須</p>
             <input
               {...register('phone')}
               placeholder="090-1234-5678"
               required={true}
             />
+            <label />
           </div>
 
           <div className="mb-5">
             <p>メールアドレス</p>
-            <p className="text-red-500">必須</p>
             <input
               {...register('mail')}
               placeholder="example@mail.com"
               required={true}
             />
+            <label />
           </div>
 
           <div className="mb-5">
             <p>個人情報提供に同意いただけますか?</p>
-            <p className="text-red-500">必須</p>
             <p>
               <input type="radio" {...register('agreement')} required={true} />
+              <label />
               同意する
             </p>
           </div>
@@ -92,7 +92,7 @@ export const UploadFormHook: FC = () => {
           <label className="mb-5" htmlFor="update">
             写真を撮影してアップロードする
           </label>
-          <p className="text-red-500">必須</p>
+          <br />
           <input
             className="mb-5"
             id="upload"
@@ -102,6 +102,7 @@ export const UploadFormHook: FC = () => {
             {...register('photo')}
             required={true}
           />
+          <label />
         </div>
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
