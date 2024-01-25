@@ -23,8 +23,6 @@ export default function Home() {
         <a
           href="/upload"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          // rel="noopener noreferrer"
         >
           <h2 className={'mb-3 text-2xl font-semibold'}>
             手帳アップロードページ{' '}
@@ -38,10 +36,8 @@ export default function Home() {
         </a>
 
         <a
-          href="/upload"
+          href="/download"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          // target="_blank"
-          // rel="noopener noreferrer"
         >
           <h2 className={'mb-3 text-2xl font-semibold'}>
             手帳ダウンロードページ{' '}
