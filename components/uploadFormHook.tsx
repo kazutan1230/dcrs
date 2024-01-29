@@ -1,7 +1,9 @@
 'use client'
 
+import type { FC } from 'react'
 import { type SubmitHandler, useForm } from 'react-hook-form'
-import { SendImageForm } from './sendImageForm'
+import { ImageInput } from './imageInput'
+import { ImagePreview } from './imagePreview'
 
 // フォームの各要素と型
 type FormData = {
@@ -11,7 +13,7 @@ type FormData = {
   phone: string
   mail: string
   agreement: boolean
-  photo: File
+  image: FileList
 }
 
 // 確定ボタンを押したときの処理
@@ -19,7 +21,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
   alert(JSON.stringify(data, null, 2))
 }
 
-export const UploadFormHook: React.FC = () => {
+export const UploadFormHook: FC = () => {
   const { handleSubmit, register } = useForm<FormData>()
 
   return (
@@ -89,7 +91,13 @@ export const UploadFormHook: React.FC = () => {
           </div>
 
           <div>
-            <SendImageForm />
+            <ImagePreview />
+            <ImageInput
+              id="image"
+              fileInputRef={{ current: null }}
+              {...register('image')}
+              required={true}
+            />
           </div>
         </div>
         <button

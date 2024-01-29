@@ -1,31 +1,27 @@
 import type React from 'react'
-import type { InputHTMLAttributes } from 'react'
-// import type { RefCallBack } from 'react-hook-form'
+import { type ComponentPropsWithRef, forwardRef } from 'react'
+import type { FC, InputHTMLAttributes } from 'react'
 
-export type Props = {
+export type Props = ComponentPropsWithRef<'input'> & {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
   id: InputHTMLAttributes<HTMLInputElement>['id']
   fileInputRef: React.MutableRefObject<HTMLInputElement | null>
 } & React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >
 
-export const ImageInput: React.FC<Props> = ({
-  onChange,
-  id,
-  fileInputRef,
-  ...rest
-}) => {
-  return (
-    <input
-      ref={fileInputRef}
-      id={id}
-      type="file"
-      accept="image/*"
-      onChange={onChange}
-      hidden={true}
-      {...rest}
-    />
-  )
-}
+export const ImageInput: FC<Props> = forwardRef(
+  ({ onChange, id, fileInputRef, ...props }, ref) => {
+    return (
+      <input
+        ref={fileInputRef}
+        id={id}
+        type="file"
+        accept="image/*"
+        onChange={onChange}
+        hidden={true}
+      />
+    )
+  },
+)
