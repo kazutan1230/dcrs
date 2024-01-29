@@ -1,7 +1,7 @@
 'use client'
 
-import type { FC } from 'react'
 import { type SubmitHandler, useForm } from 'react-hook-form'
+import { SendImageForm } from './sendImageForm'
 
 // フォームの各要素と型
 type FormData = {
@@ -12,7 +12,6 @@ type FormData = {
   mail: string
   agreement: boolean
   photo: File
-  // photo: "file"
 }
 
 // 確定ボタンを押したときの処理
@@ -20,7 +19,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
   alert(JSON.stringify(data, null, 2))
 }
 
-export const UploadFormHook: FC = () => {
+export const UploadFormHook: React.FC = () => {
   const { handleSubmit, register } = useForm<FormData>()
 
   return (
@@ -89,20 +88,9 @@ export const UploadFormHook: FC = () => {
             </p>
           </div>
 
-          <label className="mb-5" htmlFor="update">
-            写真を撮影してアップロードする
-          </label>
-          <br />
-          <input
-            className="mb-5"
-            id="upload"
-            type="file"
-            accept="image/*"
-            capture="environment"
-            {...register('photo')}
-            required={true}
-          />
-          <label />
+          <div>
+            <SendImageForm />
+          </div>
         </div>
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
