@@ -17,9 +17,8 @@ export const ImagePreview: FC = () => {
     name: string | null
     source: string | null
   }>({ file: null, name: null, source: null })
-  // const [fileName, setFileName] = useState('')
-  // const [imageSource, setImageSource] = useState('')
 
+  // 使うかもしれんから残してる。
   // const selectFile = () => {
   //   if (!fileInputRef.current) {
   //     return
