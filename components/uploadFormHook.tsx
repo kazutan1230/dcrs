@@ -16,13 +16,24 @@ type FormData = {
   image: FileList
 }
 
-// 確定ボタンを押したときの処理
+// 「確認画面へ」ボタンを押したときの処理
+
 const onSubmit: SubmitHandler<FormData> = (data) => {
   alert(JSON.stringify(data, null, 2))
+  if (!data.image) {
+    console.log('画像が選択されていません')
+    return
+  }
 }
 
 export const UploadFormHook: FC = () => {
-  const { handleSubmit, register } = useForm<FormData>()
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<FormData>()
+
+  //
 
   return (
     <>
@@ -96,7 +107,6 @@ export const UploadFormHook: FC = () => {
               id="image"
               fileInputRef={{ current: null }}
               {...register('image')}
-              required={true}
             />
           </div>
         </div>

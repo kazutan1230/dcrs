@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
+    "@happy-dom/global-registrator": "^13.3.1",
+    "@testing-library/react": "^14.1.2",
     "@types/bun": "^1.0.4",
     "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
@@ -24,6 +26,6 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "beta"
   }
 }

@@ -21,6 +21,7 @@ export const ImageInput: FC<Props> = forwardRef(
         accept="image/*"
         onChange={onChange}
         hidden={true}
+        required={true}
       />
     )
   },

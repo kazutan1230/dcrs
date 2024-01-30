@@ -50,6 +50,8 @@ export const ImagePreview: FC = () => {
   }
 
   // キャンセルボタンの処理
+  // こいつでは送信する時uploadFormHook.tsxでの「確認画面へ」ボタンを押した時、
+  // キャンセルしててもDataFormに残ってるから何とかせなあかん。
   const handleClickCancelButton = () => {
     setFileName('')
     setImageSource('')
