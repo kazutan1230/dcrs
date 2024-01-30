@@ -21,7 +21,7 @@ type FormData = {
 const onSubmit: SubmitHandler<FormData> = (data) => {
   alert(JSON.stringify(data, null, 2))
   if (!data.image) {
-    console.log('画像が選択されていません')
+    // console.log('画像が選択されていません')
     return
   }
 }
@@ -32,8 +32,6 @@ export const UploadFormHook: FC = () => {
     register,
     formState: { errors },
   } = useForm<FormData>()
-
-  //
 
   return (
     <>
