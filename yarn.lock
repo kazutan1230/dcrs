@@ -91,7 +91,7 @@
   resolved "https://registry.npmjs.org/@biomejs/cli-win32-x64/-/cli-win32-x64-1.5.3.tgz"
   integrity sha512-fMvbSouZEASU7mZH8SIJSANDm5OqsjgtVXlbUqxwed6BP7uuHRSs396Aqwh2+VoW8fwTpp6ybIUoC9FrzB0kyA==
 
-"@happy-dom/global-registrator@^13.3.1":
+"@happy-dom/global-registrator@^13.3.8":
   version "13.3.8"
   resolved "https://registry.npmjs.org/@happy-dom/global-registrator/-/global-registrator-13.3.8.tgz"
   integrity sha512-7pHqBYKqfHZkowdy/ScCLHqwHLFDO0nQqizp3fKuBdQEaeYoCOm8igVLBLMtOtZ9Lzuv2cYk7g19qfuQLHy7xw==
