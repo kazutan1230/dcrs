@@ -37,11 +37,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 }
 
 export const UploadFormHook: FC = () => {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<FormData>()
+  const { handleSubmit, register } = useForm<FormData>()
 
   return (
     <>
@@ -51,6 +47,7 @@ export const UploadFormHook: FC = () => {
           <div className="mb-5">
             <p>お名前</p>
             <input
+              className="w-80"
               {...register('name')}
               placeholder="オープン太郎"
               required={true}
@@ -63,6 +60,7 @@ export const UploadFormHook: FC = () => {
             {/* フォームのサイズを調整すべき */}
             {/* <input {...register('company')} placeholder="株式会社オープンアップグループ" required /> */}
             <input
+              className="w-80"
               {...register('company')}
               placeholder="オープンアップグループ"
               required={true}
@@ -73,6 +71,7 @@ export const UploadFormHook: FC = () => {
           <div className="mb-5">
             <p>社員番号</p>
             <input
+              className="w-80"
               {...register('employeeId')}
               placeholder="123456"
               required={true}
@@ -83,6 +82,7 @@ export const UploadFormHook: FC = () => {
           <div className="mb-5">
             <p>連絡可能な個人電話番号</p>
             <input
+              className="w-80"
               {...register('phone')}
               placeholder="090-1234-5678"
               required={true}
@@ -93,6 +93,7 @@ export const UploadFormHook: FC = () => {
           <div className="mb-5">
             <p>メールアドレス</p>
             <input
+              className="w-80"
               {...register('mail')}
               placeholder="example@mail.com"
               required={true}

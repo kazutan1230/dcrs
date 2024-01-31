@@ -14,9 +14,9 @@ export const ImagePreview: FC = () => {
   // 添付画像を状態管理
   const [images, setImages] = useState<{
     file: File | null
-    name: string | null
-    source: string | null
-  }>({ file: null, name: null, source: null })
+    name: string
+    source: string
+  }>({ file: null, name: '', source: '' })
 
   // 使うかもしれんから残してる。
   // const selectFile = () => {
@@ -27,8 +27,13 @@ export const ImagePreview: FC = () => {
   //   fileInputRef.current.click()
   // }
 
-  // ファイルが読み込まれた際に、画像データを抽出する処理
-  const generateImageSource = (files: FileList) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (!files || files.length <= 0) {
+      return
+    }
+
+    // 画像データを抽出する処理
     const file = files[0]
     const fileReader = new FileReader()
     fileReader.onload = () => {
@@ -42,16 +47,6 @@ export const ImagePreview: FC = () => {
     fileReader.readAsDataURL(file)
   }
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files
-    if (!files || files.length <= 0) {
-      return
-    }
-
-    // 画像データを抽出する処理
-    generateImageSource(files)
-  }
-
   // キャンセルボタンの処理
   // こいつでは送信する時uploadFormHook.tsxでの「確認画面へ」ボタンを押した時、
   // キャンセルしててもDataFormに残ってるから何とかせなあかん。
@@ -59,8 +54,8 @@ export const ImagePreview: FC = () => {
     setImages({
       ...images,
       file: null,
-      name: null,
-      source: null,
+      name: '',
+      source: '',
     })
     if (fileInputRef.current) {
       fileInputRef.current.value = ''
@@ -94,14 +89,15 @@ export const ImagePreview: FC = () => {
         />
       </label>
       <div>
-        {/* hidden属性付けて、画像アップロードされてる時だけ表示できるようにした方がいい */}
-        <button
-          type="button"
-          onClick={handleClickCancelButton}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2"
-        >
-          × 画像アップロードキャンセル
-        </button>
+        {images.source && images.name && (
+          <button
+            type="button"
+            onClick={handleClickCancelButton}
+            className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2"
+          >
+            × 画像アップロードキャンセル
+          </button>
+        )}
       </div>
     </>
   )
