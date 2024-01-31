@@ -27,11 +27,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 }
 
 export const UploadFormHook: FC = () => {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<FormData>()
+  const { handleSubmit, register } = useForm<FormData>()
 
   return (
     <>
