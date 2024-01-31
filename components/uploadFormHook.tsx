@@ -6,7 +6,7 @@ import { ImageInput } from './imageInput'
 import { ImagePreview } from './imagePreview'
 
 // フォームの各要素と型
-type FormData = {
+export type FormData = {
   name: string
   company: string
   employeeId: number
@@ -20,6 +20,16 @@ type FormData = {
 
 const onSubmit: SubmitHandler<FormData> = (data) => {
   alert(JSON.stringify(data, null, 2))
+  // デモ版仮でlocalStorageに保存
+  // ホントはAPI送信してDBに投げたい。
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem('FormData', JSON.stringify(data))
+    console.log('localStorageに保存しました')
+    console.log(data.image)
+  } else {
+    console.log('localStorageがありません')
+  }
+
   if (!data.image) {
     // console.log('画像が選択されていません')
     return
