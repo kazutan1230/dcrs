@@ -1,4 +1,4 @@
-FROM node:latest as base
+FROM node as base
 WORKDIR /app
 RUN npm install -g bun
 
