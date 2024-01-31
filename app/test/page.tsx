@@ -1,3 +1,5 @@
+'use client'
+
 import { JsonView } from '@/components/jsonView'
 
 export default function Test() {
