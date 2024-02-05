@@ -368,6 +368,7 @@
     csstype "^3.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react-dom@^18.0.0", "@types/react-dom@^18.2.19":
   version "18.2.19"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.19.tgz"
@@ -382,6 +383,8 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+=======
+>>>>>>> 38399e3 ([autofix.ci] apply automated fixes)
 "@types/react-dom@^18.0.0", "@types/react-dom@^18.2.18":
   version "18.2.18"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.18.tgz"
