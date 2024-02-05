@@ -6,7 +6,7 @@ import { ImageInput } from './imageInput'
 import { ImagePreview } from './imagePreview'
 
 // フォームの各要素と型
-export type FormData = {
+type FormData = {
   name: string
   company: string
   employeeId: number
