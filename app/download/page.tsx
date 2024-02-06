@@ -5,10 +5,10 @@ import { useFormData } from '@/components/useFormData'
 
 // デバッグ用
 // localstrageをクリア
-const clearLocalstrange = () => {
-  localStorage.clear()
-  console.log('localStorageをクリアしました')
-}
+// const clearLocalstrage = () => {
+//   localStorage.clear()
+//   console.log('localStorageをクリアしました')
+// }
 
 export default function Download() {
   // const localFormData = JSON.parse(localStorage.getItem('FormData') || '{}')
@@ -20,13 +20,13 @@ export default function Download() {
       </main>
     )
   }
-  if (formdata === undefined) {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1>FormDataはありません</h1>
-      </main>
-    )
-  }
+  // if (formdata === undefined) {
+  //   return (
+  //     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+  //       <h1>FormDataはありません</h1>
+  //     </main>
+  //   )
+  // }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -64,7 +64,6 @@ export default function Download() {
                   {formdata.name}
                 </th>
               )}
-
               {/* localFormDataなし */}
               {formdata === undefined ? (
                 <td className="px-6 py-4 font-medium text-gray-900">
@@ -92,12 +91,8 @@ export default function Download() {
                 </div>
               </td>
               <td className="flex justify-end gap-4 px-6 py-4 font-medium">
-                <button
-                  type="button"
-                  onClick={() => clearLocalstrange()}
-                  className="text-primary-700"
-                >
-                  clearLocalstrange
+                <button type="button" className="text-primary-700">
+                  clearLocalstrage
                 </button>
               </td>
             </tr>
