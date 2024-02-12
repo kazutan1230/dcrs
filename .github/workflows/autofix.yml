@@ -21,7 +21,7 @@ jobs:
         uses: oven-sh/setup-bun@v1
 
       - name: Delete lock files
-        run: rm -rf bun.lockb yarn.lock
+        run: rm bun.lockb yarn.lock
 
       - name: Update dependencies
         run: bun update -y
