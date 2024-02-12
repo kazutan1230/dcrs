@@ -23,8 +23,8 @@ jobs:
       - name: Install and update dependencies
         run: bun i -y && bun update -y
 
-      - name: Delete node_modules
-        run: rm -rf node_modules
+      - name: Delete files which related dependencies
+        run: rm -rf bun.lockb node_modules yarn.lock
 
       - name: Update dependencies
         run: bun update -y
