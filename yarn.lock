@@ -12,6 +12,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 # bun ./bun.lockb --hash: 1EB3531568BD550B-d48169d06e402f18-1BC635B5C5CB9577-12785a78ccce0b39
 =======
 # bun ./bun.lockb --hash: E1CD8A22B06A9108-baf3c2fdc81df25c-F3AAF99282035C23-5264a3289fb87f65
@@ -49,6 +51,12 @@
 =======
 # bun ./bun.lockb --hash: 2EAD887FAD0C5823-f6547c3b325587ca-E87B86CD9A6F3D08-b45777e6d844cc11
 >>>>>>> b2eaed1 ([autofix.ci] apply automated fixes)
+=======
+# bun ./bun.lockb --hash: EC32DB2BDB3A2344-2b4a9855a95236f0-513B310C058F8E0C-fa0b52b6ac80e103
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
+=======
+# bun ./bun.lockb --hash: DF5D15E06893431B-25cea1cd26640795-F912B6039685D5DB-a00bf587b631e2dd
+>>>>>>> 986fefb ([autofix.ci] apply automated fixes)
 
 
 "@alloc/quick-lru@^5.2.0":
@@ -322,6 +330,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 "@next/env@14.1.2-canary.3":
   version "14.1.2-canary.3"
   resolved "https://registry.npmjs.org/@next/env/-/env-14.1.2-canary.3.tgz"
@@ -549,6 +559,108 @@
   resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.1.1-canary.43.tgz"
   integrity sha512-CsvbIeTjRsLVt3sWdD1rp03s4L7cf8Vnvh4Nf4EQr7dSVXRT51Gak4jhDdol9ZOUZ3WoZGO5cAP4vlR2rojC9Q==
 >>>>>>> b2eaed1 ([autofix.ci] apply automated fixes)
+=======
+"@next/env@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.1.1-canary.60.tgz"
+  integrity sha512-hOhJa8FN9syafxaugnsYIK3hayvq/ghi+ClQKfvkWWbVNLrQVlFGfU/aa5yQWPi4Vku8IM7F8CGWhj5S/b2Cjw==
+
+"@next/swc-darwin-arm64@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.1.1-canary.60.tgz"
+  integrity sha512-Tx6B3evwCEWiY/1I+5dmAvd5Xmim7BQEGd96G6POM2Yvqm1IRPtX1F/2jfhyOrPDr1fs6xJ1sV0kUDL+Rely9g==
+
+"@next/swc-darwin-x64@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-14.1.1-canary.60.tgz"
+  integrity sha512-MqJVmkKXdyJAglT8SwThJ0aa9IJ264oKXsi0KX6VXii8FagHmrZoVHRNh/QS1oJnzHHLfDdG9ZHPv6vPt0hHBw==
+
+"@next/swc-linux-arm64-gnu@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-14.1.1-canary.60.tgz"
+  integrity sha512-jrbxeM5pZ24vIQkdk1jpty/mM5RK+RzTvTMhttPYQR5K/TXHSHWVzGt7X9n4Mh+CHd4dlbL+X9Oy+UYeKacj+Q==
+
+"@next/swc-linux-arm64-musl@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-14.1.1-canary.60.tgz"
+  integrity sha512-zYkswWciZuU5dYxMfbmuFJcj0hRrFlY/8Q5W6F4vsPWzEWhy/gGAfOLkVRNDOyr4CXUaA6BftKfsIeXbOOMECA==
+
+"@next/swc-linux-x64-gnu@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.1.1-canary.60.tgz"
+  integrity sha512-gFrAXnlV++g+5cM95esG4DU444G2TpId85TFAk0xZxam1N6Z3yPsJw/ljTzHaWRrWiMhfWdJW1OwiwuCubYkBA==
+
+"@next/swc-linux-x64-musl@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.1.1-canary.60.tgz"
+  integrity sha512-1ekUXrC207ufoufHky23R6rND0L9Kj9UJxEWt5/eyax1+CTWNprZk1BFM1gPYYSb8oolde995xTCJqQ5SoluEg==
+
+"@next/swc-win32-arm64-msvc@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-14.1.1-canary.60.tgz"
+  integrity sha512-urgm/4zBhXJahSEG8t72wOBF6X0eiGnoDsjaA93zUXvrIUO2mvkBrhWAFkb7QV0TdzRw13R2op05wh7LHRAmQw==
+
+"@next/swc-win32-ia32-msvc@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-14.1.1-canary.60.tgz"
+  integrity sha512-DbiZZFO++vK462GJzQbuBrKmXmKen3HoPevGktJd0UeXDen6hYWNjCsOu0gEM53k2QU7BxZUwCtnq4Bfk9Tz+Q==
+
+"@next/swc-win32-x64-msvc@14.1.1-canary.60":
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.1.1-canary.60.tgz"
+  integrity sha512-MlC1DALQTR18DtyAH2xbNam+1K0NCbrlef5xNYZssfT2XITFmk8jp78C8NkmM1Zi96cobBmITEB0Ws115PxxmQ==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
+=======
+"@next/env@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.1.1-canary.80.tgz"
+  integrity sha512-wOC/paUahuvf/AE/oe3mnvZgi1lTKdM1NUlutr9+4mGz+C+Mw4doPu628vYu7UiKtTuUxRHFgGslKC9oeTvjhw==
+
+"@next/swc-darwin-arm64@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.1.1-canary.80.tgz"
+  integrity sha512-rRvpAq7BNzsaqqktu/NuFUt9ZkH9ZADEAFsgsFEsyUmpAjLE6d/o+GeyfiRWvvs8Lcl+NDoEta/iT4FYwEUG1g==
+
+"@next/swc-darwin-x64@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-14.1.1-canary.80.tgz"
+  integrity sha512-lEC0LUr7ZIpGnsdNccFmEQ1I/YXIZBBfwmCMpFtF3DjJXSX92HK31IWbBzL9cGHUQcaq3L+Wyva8TlsNR0e80w==
+
+"@next/swc-linux-arm64-gnu@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-14.1.1-canary.80.tgz"
+  integrity sha512-I+wuvjUUh9KFYXNwPwV4UWwBDXthLV6C5LCtcp0jPwDJrgdXTyMD3v+P6aJ/xOWbyv/nWOJVW9PBOVIeYL+TqA==
+
+"@next/swc-linux-arm64-musl@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-14.1.1-canary.80.tgz"
+  integrity sha512-6WJ+Agyiidq2o5rUJOyBINmbUBL1EdXOIDF6zuNgC1REoeXdhqFf3oB1KoJatXgjlhMyltOoepgutuZWJDZ+Zg==
+
+"@next/swc-linux-x64-gnu@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.1.1-canary.80.tgz"
+  integrity sha512-szjzs8GvhdxyC0fbXT0JlDMDVkAgqYQs3iN3yzF4UMhfRM9VVyBSJYiHPhTrXUatlZ8h9SlMoP5YuN0ZBSbqoA==
+
+"@next/swc-linux-x64-musl@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.1.1-canary.80.tgz"
+  integrity sha512-Nek2e3aKt9tjN3YdAGFetjRVtxdIBK8A9iPnVCGrYuy2ERpAwsupOk8nmMzIlp1kGxxGsLWL1vBojQwjukKWkg==
+
+"@next/swc-win32-arm64-msvc@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-14.1.1-canary.80.tgz"
+  integrity sha512-aPnjiYjduvB5ut7juZ4g/mc9aY8MCsQESrSH5/dQVZJF5o6JzcNj+0D21J1/oeqiBOVsvn1LMjNOMU762t0gHQ==
+
+"@next/swc-win32-ia32-msvc@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-14.1.1-canary.80.tgz"
+  integrity sha512-n0u0CofRBEx35Nn6mxS1o4o1+dseR9GhTuVqj6Zy2xIby66IjuuxKuLD49Ufg9qsj1oCAkJpsToJqmqisc4Eyg==
+
+"@next/swc-win32-x64-msvc@14.1.1-canary.80":
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.1.1-canary.80.tgz"
+  integrity sha512-eNTkUJVB2JyPxnf9iDEMEkMFPrxb1lA32Mk0H7kl7EndQ0hNmSnDbcBLji3J2jBFcTK8ok0FH5sZH3c/lxR8aw==
+>>>>>>> 986fefb ([autofix.ci] apply automated fixes)
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -629,6 +741,7 @@
   integrity sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/bun@^1.0.8":
   version "1.0.8"
   resolved "https://registry.npmjs.org/@types/bun/-/bun-1.0.8.tgz"
@@ -679,15 +792,28 @@
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/bun/-/bun-1.0.5.tgz"
   integrity sha512-c14fs5QLLanldcZpX/GjIEKeo++NDzOlixUZ7IUWzN7AoBTisYyWxaxdXNhpAP5I1mPcd92Zagq8sdgTnUXWjg==
+=======
+"@types/bun@^1.0.5":
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/@types/bun/-/bun-1.0.6.tgz"
+  integrity sha512-RtBfd9vxT4LmgKtENsJeM5j0Kwy+CyIEY8Z99oPdh5SZWjZAIEsNdSCeAO3q3GBiNWXjJ5IIJPjDQdwSeKiRFA==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
-    bun-types "1.0.26"
+    bun-types "1.0.27"
 
+<<<<<<< HEAD
 "@types/node@*", "@types/node@^20.11.16", "@types/node@~20.11.3":
 >>>>>>> cd54bab ([autofix.ci] apply automated fixes)
   version "20.11.16"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.11.16.tgz"
   integrity sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==
 >>>>>>> 9d82020 ([autofix.ci] apply automated fixes)
+=======
+"@types/node@*", "@types/node@^20.11.17", "@types/node@~20.11.3":
+  version "20.11.19"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.11.19.tgz"
+  integrity sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
     undici-types "~5.26.4"
 
@@ -696,6 +822,7 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.11.tgz"
   integrity sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "@types/react@*", "@types/react@^18.2.61":
@@ -740,6 +867,12 @@
   version "18.2.55"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.2.55.tgz"
   integrity sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==
+=======
+"@types/react@*", "@types/react@^18.2.55":
+  version "18.2.56"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.2.56.tgz"
+  integrity sha512-NpwHDMkS/EFZF2dONFQHgkPRwhvgq/OAvIaGQzxGSBmaeR++kTg6njr15Vatz0/2VcCEwJQFi6Jf4Q0qBu0rLA==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -875,6 +1008,7 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
+<<<<<<< HEAD
 bun-types@1.0.29:
   version "1.0.29"
   resolved "https://registry.npmjs.org/bun-types/-/bun-types-1.0.29.tgz"
@@ -891,6 +1025,12 @@ bun-types@1.0.26:
   version "1.0.26"
   resolved "https://registry.npmjs.org/bun-types/-/bun-types-1.0.26.tgz"
   integrity sha512-VcSj+SCaWIcMb0uSGIAtr8P92zq9q+unavcQmx27fk6HulCthXHBVrdGuXxAZbFtv7bHVjizRzR2mk9r/U8Nkg==
+=======
+bun-types@1.0.27:
+  version "1.0.27"
+  resolved "https://registry.npmjs.org/bun-types/-/bun-types-1.0.27.tgz"
+  integrity sha512-fwaJ3Ey6InD4nAkUd+AwzHDmxGdWWRy/SWh0QQEw7QF/ABnoqSv+iQrA5tIK4TyUyR/V9446G+w53+sOmJOJyA==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
 >>>>>>> cd54bab ([autofix.ci] apply automated fixes)
     "@types/node" "~20.11.3"
@@ -921,6 +1061,7 @@ camelcase-css@^2.0.1:
 
 caniuse-lite@^1.0.30001579:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "1.0.30001593"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001593.tgz"
   integrity sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==
@@ -929,6 +1070,11 @@ caniuse-lite@^1.0.30001579:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001585.tgz"
   integrity sha512-yr2BWR1yLXQ8fMpdS/4ZZXpseBgE7o4g41x3a6AJOqZuOi+iE/WdJYAuZ6Y95i4Ohd2Y+9MzIWRR+uGABH4s3Q==
 >>>>>>> 1b0eff6 ([autofix.ci] apply automated fixes)
+=======
+  version "1.0.30001588"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001588.tgz"
+  integrity sha512-+hVY9jE44uKLkH0SrUTqxjxqNTOWHsbnQDIKjwkZ3lNTzUUVdBLBGXtj/q5Mp5u98r3droaZAewQuEDzjQdZlQ==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -1581,6 +1727,8 @@ next@canary:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   version "14.1.2-canary.3"
   resolved "https://registry.npmjs.org/next/-/next-14.1.2-canary.3.tgz"
   integrity sha512-pnW5t/y53dnbS0Ubt1V2QbJs+72v1+nU+ny9+dYnMvvYBfJheYPveAHrVU7DD7FcJr6HKZjAw5TReUj8uTI22A==
@@ -1621,6 +1769,20 @@ next@canary:
   dependencies:
     "@next/env" "14.1.1-canary.43"
 >>>>>>> b2eaed1 ([autofix.ci] apply automated fixes)
+=======
+  version "14.1.1-canary.60"
+  resolved "https://registry.npmjs.org/next/-/next-14.1.1-canary.60.tgz"
+  integrity sha512-8qas+NlbntgqQCh6D2Quzyo15c6VRlsevSaJx7OXbHCgqYWhWshPBktNGUg5yG0BtpOebhh1sinHwTrSs2NFKg==
+  dependencies:
+    "@next/env" "14.1.1-canary.60"
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
+=======
+  version "14.1.1-canary.80"
+  resolved "https://registry.npmjs.org/next/-/next-14.1.1-canary.80.tgz"
+  integrity sha512-mjAz6ssshgYAtYxH4dzvZ57P0jTgbcMHsBLx6Rc7Nlh5vL2STILlDDndd4gAubbop7K4+ZTjvaI5l+sE8BHc7g==
+  dependencies:
+    "@next/env" "14.1.1-canary.80"
+>>>>>>> 986fefb ([autofix.ci] apply automated fixes)
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -1628,6 +1790,8 @@ next@canary:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@next/swc-darwin-arm64" "14.1.2-canary.3"
@@ -1671,6 +1835,28 @@ node-releases@^2.0.14:
 >>>>>>> cd54bab ([autofix.ci] apply automated fixes)
 =======
 >>>>>>> 3e1996c ([autofix.ci] apply automated fixes)
+=======
+    "@next/swc-darwin-arm64" "14.1.1-canary.60"
+    "@next/swc-darwin-x64" "14.1.1-canary.60"
+    "@next/swc-linux-arm64-gnu" "14.1.1-canary.60"
+    "@next/swc-linux-arm64-musl" "14.1.1-canary.60"
+    "@next/swc-linux-x64-gnu" "14.1.1-canary.60"
+    "@next/swc-linux-x64-musl" "14.1.1-canary.60"
+    "@next/swc-win32-arm64-msvc" "14.1.1-canary.60"
+    "@next/swc-win32-ia32-msvc" "14.1.1-canary.60"
+    "@next/swc-win32-x64-msvc" "14.1.1-canary.60"
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
+=======
+    "@next/swc-darwin-arm64" "14.1.1-canary.80"
+    "@next/swc-darwin-x64" "14.1.1-canary.80"
+    "@next/swc-linux-arm64-gnu" "14.1.1-canary.80"
+    "@next/swc-linux-arm64-musl" "14.1.1-canary.80"
+    "@next/swc-linux-x64-gnu" "14.1.1-canary.80"
+    "@next/swc-linux-x64-musl" "14.1.1-canary.80"
+    "@next/swc-win32-arm64-msvc" "14.1.1-canary.80"
+    "@next/swc-win32-ia32-msvc" "14.1.1-canary.80"
+    "@next/swc-win32-x64-msvc" "14.1.1-canary.80"
+>>>>>>> 986fefb ([autofix.ci] apply automated fixes)
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
@@ -1867,14 +2053,22 @@ queue-microtask@^1.2.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "react@18.3.0-canary-2f8f77602-20240229", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@^16.8.0 || ^17 || ^18", react@^18.0.0, react@^18.2.0, react@canary:
   version "18.3.0-canary-2f8f77602-20240229"
   resolved "https://registry.npmjs.org/react/-/react-18.3.0-canary-2f8f77602-20240229.tgz"
   integrity sha512-UTV7PJKz9UY5MZNH8TI44ftSjzibBzXBfI0/u09Rx+bIif7N7djKks0mPy26z1J2jNSsOtn45qcRGailzUCqww==
+=======
+"react@18.3.0-canary-a9cc32511-20240215", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@^16.8.0 || ^17 || ^18", react@^18.0.0, react@^18.2.0, react@canary:
+  version "18.3.0-canary-a9cc32511-20240215"
+  resolved "https://registry.npmjs.org/react/-/react-18.3.0-canary-a9cc32511-20240215.tgz"
+  integrity sha512-cnbvGUMpkogWs8F6+h4yoKM/+L4FBdWX1T68tbWMbxKAqKfvT6jt7yFLqD9LoIlc5PITBDkcFcrY9B8Z1+AmPw==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
     loose-envify "^1.1.0"
 
 react-dom@^18.0.0, react-dom@^18.2.0, react-dom@canary:
+<<<<<<< HEAD
   version "18.3.0-canary-2f8f77602-20240229"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.3.0-canary-2f8f77602-20240229.tgz"
   integrity sha512-uDX0koU0haiks+XZ7F0CTHT+0jx3WiKp9QVshRcFdO9ojF2aAnjJY6PUrRy4oHXEXUkI+frhqIh31V82zFtPhg==
@@ -1891,6 +2085,14 @@ react-dom@^18.0.0, react-dom@^18.2.0, react-dom@canary:
 >>>>>>> 9d82020 ([autofix.ci] apply automated fixes)
   dependencies:
     loose-envify "^1.1.0"
+=======
+  version "18.3.0-canary-a9cc32511-20240215"
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.3.0-canary-a9cc32511-20240215.tgz"
+  integrity sha512-n3D1z00jwTsKXA/O4iCK5xxuSlXS63stK655NHgv4MTr5mzINvEesMRTMzpcV8JrdsmnYu9NX+nOgY1g6Tiliw==
+  dependencies:
+    loose-envify "^1.1.0"
+    scheduler "0.24.0-canary-a9cc32511-20240215"
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
 
 "react@18.3.0-canary-763612647-20240126", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@^18.2.0:
   version "18.3.0-canary-763612647-20240126"
@@ -2066,6 +2268,7 @@ run-parallel@^1.1.9:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "scheduler@0.24.0-canary-2f8f77602-20240229":
   version "0.24.0-canary-2f8f77602-20240229"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.24.0-canary-2f8f77602-20240229.tgz"
@@ -2076,6 +2279,12 @@ run-parallel@^1.1.9:
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.24.0-canary-2bc7d336a-20240205.tgz"
   integrity sha512-6oUpU1PWu2NzdxHI7xwLBZ+AjFtubgtMUqfVtdp7viOpKduMY6JzBoxJf4Npzo9AnrJHmeTzcdlfNwxlt2NHkw==
 >>>>>>> 9d82020 ([autofix.ci] apply automated fixes)
+=======
+"scheduler@0.24.0-canary-a9cc32511-20240215":
+  version "0.24.0-canary-a9cc32511-20240215"
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.24.0-canary-a9cc32511-20240215.tgz"
+  integrity sha512-4gyJkA9RIIV/YG7cN9uYvxfaFSh2kiSHlm+hPT862PKT8I9GD6c23T7sNpuwFvKBV4EMNpvMvjooP5bE7pexeQ==
+>>>>>>> c5f11ea ([autofix.ci] apply automated fixes)
   dependencies:
     loose-envify "^1.1.0"
 
