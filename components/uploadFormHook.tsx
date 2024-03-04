@@ -184,25 +184,23 @@ export const UploadFormHook: FC = () => {
               required={true}
             />
           </label>
-          <div>
-            {images.source && images.name && (
-              <button
-                type="button"
-                onClick={handleClickCancelButton}
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2"
-              >
-                × 画像アップロードキャンセル
-              </button>
-            )}
-          </div>
+          {images.source && images.name && (
+            <button
+              type="button"
+              onClick={handleClickCancelButton}
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2"
+            >
+              × 画像アップロードキャンセル
+            </button>
+          )}
+          <br />
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            type="submit"
+          >
+            確認画面へ
+          </button>
         </div>
-        <br />
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-          type="submit"
-        >
-          確認画面へ
-        </button>
       </form>
     </>
   )

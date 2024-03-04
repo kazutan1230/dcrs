@@ -14,7 +14,7 @@ export const JsonView: FC = () => {
     return <p>No Json Data</p>
   }
   return (
-    <div>
+    <>
       <p>Json Data</p>
       <ul>
         <li>name: {localFormData.name}</li>
@@ -23,6 +23,6 @@ export const JsonView: FC = () => {
         <li>phone: {localFormData.phone}</li>
         {/* <li>image: {localFormData.image}</li> */}
       </ul>
-    </div>
+    </>
   )
 }
