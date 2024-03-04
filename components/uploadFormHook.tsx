@@ -29,12 +29,14 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 export const UploadFormHook: FC = () => {
   const { handleSubmit, register, setValue } = useForm<FormData>()
 
-  // 添付画像を状態管理
-  const [images, setImages] = React.useState<{
-    file: File | null
-    name: string
-    source: string
-  }>({ file: null, name: '', source: '' })
+type ImageData = {
+  file: File
+  name: string
+  source: string
+}
+
+   // 添付画像を状態管理
+  const [images, setImages] = React.useState<ImageData>({ file: new File([], ""), name: '', source: '' })
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
@@ -63,7 +65,7 @@ export const UploadFormHook: FC = () => {
   const handleClickCancelButton = () => {
     setImages({
       ...images,
-      file: null,
+      file: new File([], ""),
       name: '',
       source: '',
     })
