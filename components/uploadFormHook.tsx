@@ -29,14 +29,18 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 export const UploadFormHook: FC = () => {
   const { handleSubmit, register, setValue } = useForm<FormData>()
 
-type ImageData = {
-  file: File
-  name: string
-  source: string
-}
+  type ImageData = {
+    file: File
+    name: string
+    source: string
+  }
 
-   // 添付画像を状態管理
-  const [images, setImages] = React.useState<ImageData>({ file: new File([], ""), name: '', source: '' })
+  // 添付画像を状態管理
+  const [images, setImages] = React.useState<ImageData>({
+    file: new File([], ''),
+    name: '',
+    source: '',
+  })
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
@@ -65,7 +69,7 @@ type ImageData = {
   const handleClickCancelButton = () => {
     setImages({
       ...images,
-      file: new File([], ""),
+      file: new File([], ''),
       name: '',
       source: '',
     })
@@ -154,16 +158,51 @@ type ImageData = {
             同意する
             <input type="checkbox" {...register('agreement')} required={true} />
           </label>
-          <ImagePreview />
-          <ImageInput {...register('image')} />
-          <br />
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-            type="submit"
+
+          <label
+            className="mb-5"
+            style={{
+              border: 'white 3px dotted',
+              display: 'flex',
+              borderRadius: 12,
+              justifyContent: 'center',
+              alignItems: 'center',
+              overflow: 'hidden',
+              cursor: 'pointer',
+            }}
           >
-            確認画面へ
-          </button>
+            {images.source && images.name ? (
+              <img src={images.source} alt={images.name} />
+            ) : (
+              <span className="after:content-['*'] after:ml-0.5 after:text-red-500">
+                画像をアップロードする
+              </span>
+            )}
+            <ImageInput
+              onChange={handleImageChange}
+              id="image"
+              required={true}
+            />
+          </label>
+          <div>
+            {images.source && images.name && (
+              <button
+                type="button"
+                onClick={handleClickCancelButton}
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2"
+              >
+                × 画像アップロードキャンセル
+              </button>
+            )}
+          </div>
         </div>
+        <br />
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          type="submit"
+        >
+          確認画面へ
+        </button>
       </form>
     </>
   )
