@@ -34,9 +34,7 @@ export default function Download() {
       <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
         <thead className="bg-gray-50">
           <tr>
-            <th scope="col" className="px-6 py-4 font-medium text-gray-900">
-              hoge
-            </th>
+            <th scope="col" className="px-6 py-4 font-medium text-gray-900" />
             <th scope="col" className="px-6 py-4 font-medium text-gray-900">
               name
             </th>
@@ -47,13 +45,13 @@ export default function Download() {
               employeeId
             </th>
             <th scope="col" className="px-6 py-4 font-medium text-gray-900">
-              phone
+              phone number
             </th>
             <th scope="col" className="px-6 py-4 font-medium text-gray-900">
               mail
             </th>
             <th scope="col" className="px-6 py-4 font-medium text-gray-900">
-              ?
+              operation
             </th>
           </tr>
         </thead>
@@ -63,7 +61,6 @@ export default function Download() {
               <div className="flex h-5 items-center">
                 <input
                   type="checkbox"
-                  id="example12"
                   name="checkGroup1"
                   className="h-4 w-4 rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 focus:ring-offset-0 disabled:cursor-not-allowed disabled:text-gray-400"
                 />
