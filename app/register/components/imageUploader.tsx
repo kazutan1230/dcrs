@@ -24,10 +24,7 @@ export function ImageUploader<FormType extends FieldValues>({
   const [image, setImage] = useState<FileList | null>(null)
 
   function onClickUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    if (e.target.files && e.target.files[0].size > MAX_UPLOAD_FILE_SIZE) {
-      alert('1MB以下でアップロードして下さい')
-      return
-    }
+    if (isFileTooLarge(e.target.files?.[0].size as number)) return
     setImage(e.target.files)
   }
 
@@ -50,7 +47,7 @@ export function ImageUploader<FormType extends FieldValues>({
           <button
             type="button"
             onClick={onClickCancel}
-            className="btn btn-error"
+            className="btn btn-error w-max place-self-center"
           >
             <XMarkIcon className="h-6 w-6" />
             アップロードキャンセル
@@ -107,10 +104,7 @@ function DropImageZone({
     e.preventDefault()
     setIsHoverd(false)
 
-    if (e.dataTransfer.files[0].size > MAX_UPLOAD_FILE_SIZE) {
-      alert('1MB以下でアップロードして下さい')
-      return
-    }
+    if (isFileTooLarge(e.dataTransfer.files[0].size)) return
     setImage(e.dataTransfer.files)
   }
 
@@ -127,4 +121,12 @@ function DropImageZone({
       {children}
     </div>
   )
+}
+
+function isFileTooLarge(size: number) {
+  if (size > MAX_UPLOAD_FILE_SIZE) {
+    alert('1MB以下でアップロードして下さい')
+    return true
+  }
+  return false
 }
