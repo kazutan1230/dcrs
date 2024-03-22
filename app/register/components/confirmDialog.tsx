@@ -45,7 +45,7 @@ export function ConfirmDialog<FormType extends FieldValues>({
                         width={100}
                         height={100}
                         alt="Uploaded File"
-                        className="h-64 w-96 object-scale-down"
+                        className="w-full max-w-xs"
                       />
                     ) : (
                       values[key]
