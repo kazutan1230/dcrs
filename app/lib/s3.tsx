@@ -15,7 +15,7 @@ export async function getServerUrl(key: string) {
   })
 
   const command = new PutObjectCommand({
-    ACL: 'public-read',
+    ACL: 'private',
     Key: key,
     Bucket: process.env.S3_BUCKET,
   })
