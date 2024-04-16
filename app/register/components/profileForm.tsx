@@ -182,7 +182,6 @@ function Input({
   item: Checklist
   register: UseFormRegister<Profile>
 }): React.JSX.Element {
-  // biome-ignore lint/style/useNamingConvention: <JSX Element>
   const Icon = item.icon as React.ElementType
 
   return (
