@@ -29,6 +29,9 @@ env:
   REPOSITORY: marukome0743/dcrs
   GHCR_REGISTRY: ghcr.io
   GHCR_REPOSITORY: openup-labtakizawa/dcrs
+  AWS_REGION: ap-northeast-1
+  ECR_REPOSITORY: dcrs
+  LAMBDA_FUNCTION_NAME: dcrs
 
 jobs:
   build:
@@ -58,6 +61,17 @@ jobs:
           registry: ${{ env.GHCR_REGISTRY }}
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
 
       - name: Docker meta
         id: meta
