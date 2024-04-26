@@ -61,17 +61,17 @@ const checklist: Checklist[] = [
   },
 ] as const
 
-const COMPANIES = [
+const COMPANIES: string[] = [
   'オープンアップグループ',
   'ビーネックステクノロジーズ',
 ] as const
 
-export function ProfileForm() {
+export function ProfileForm(): React.JSX.Element {
   const { handleSubmit, register, unregister, getValues, setValue } =
     useForm<Profile>()
   const dialog = useRef<HTMLDialogElement>(null)
   const [image, setImage] = useState<HTMLImageElement>()
-  const onSubmit = handleSubmit(() => {
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = handleSubmit(() => {
     setImage(document.getElementsByTagName('img')?.[0] as HTMLImageElement)
     dialog.current?.showModal()
   })
