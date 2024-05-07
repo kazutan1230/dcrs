@@ -1,11 +1,13 @@
 import { getUsers } from '@/app/lib/getUsers'
 import {
+  ArrowTopRightOnSquareIcon,
   BuildingOffice2Icon,
   ClockIcon,
   EnvelopeIcon,
   IdentificationIcon,
   PhoneIcon,
   PhotoIcon,
+  TableCellsIcon,
   TagIcon,
   UserIcon,
 } from '@heroicons/react/24/solid'
@@ -13,8 +15,17 @@ import type { User } from '@prisma/client'
 import Link from 'next/link'
 import type React from 'react'
 import { Suspense } from 'react'
+import { Breadcrumb } from '../components/breadcrumb'
 import { Pagination } from '../components/pagination'
+import type { SiteLink } from '../interfaces/siteLink'
 import type { TableHeader } from '../interfaces/tableHeader'
+
+export const usersLink: SiteLink = {
+  name: '登録データ一覧',
+  href: '/users',
+  icon: TableCellsIcon,
+  color: 'text-secondary',
+} as const
 
 const indexList: TableHeader[] = [
   {
@@ -62,6 +73,8 @@ const indexList: TableHeader[] = [
 export default function Users(): React.JSX.Element {
   return (
     <>
+      <Breadcrumb crumbs={[usersLink]} />
+      <h1 className="font-semibold text-2xl">{usersLink.name}</h1>
       <div className="max-h-96 max-w-full overflow-x-auto">
         <table className="table table-xs table-pin-rows table-pin-cols table-zebra text-center">
           <thead>
@@ -151,6 +164,7 @@ async function Tbody(): Promise<React.JSX.Element> {
             <td>
               <Link href={`/users/${user.image}`} className="link link-primary">
                 {user.image}
+                <ArrowTopRightOnSquareIcon className="inline size-4 ml-1" />
               </Link>
             </td>
             <Checkbox />
