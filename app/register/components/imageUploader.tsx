@@ -3,14 +3,9 @@
 import type { Profile } from '@/app/interfaces/profile'
 import { PhotoIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-import { type DragEvent, useState } from 'react'
+import { type DragEvent, useRef, useState } from 'react'
 import type React from 'react'
-import type {
-  Path,
-  UseFormRegister,
-  UseFormSetValue,
-  UseFormUnregister,
-} from 'react-hook-form'
+import type { Path, UseFormRegister, UseFormUnregister } from 'react-hook-form'
 
 const MAX_UPLOAD_SIZE: number = 5 * 1024 * 1024
 const ACCEPTED_IMAGE_TYPES: string[] = [
@@ -23,32 +18,45 @@ const ACCEPTED_IMAGE_TYPES: string[] = [
 export function ImageUploader({
   register,
   unregister,
-  setValue,
   setError,
 }: {
   register: UseFormRegister<Profile>
   unregister: UseFormUnregister<Profile>
-  setValue: UseFormSetValue<Profile>
   setError: React.Dispatch<React.SetStateAction<string>>
 }): React.JSX.Element {
+  const inputRef = useRef<HTMLInputElement>()
   const [image, setImage] = useState<FileList>()
+  const { ref, onChange, ...rest } = register('image' as Path<Profile>, {
+    required: true,
+  })
 
-  function onClickUpload(e: React.ChangeEvent<HTMLInputElement>): void {
+  function validateFile(file: File): string {
+    if (file.size > MAX_UPLOAD_SIZE) {
+      return 'ファイルサイズは最大5MBです'
+    }
+    if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
+      return '不正なファイル形式です'
+    }
+    return ''
+  }
+
+  function onUpload(e: React.ChangeEvent<HTMLInputElement>): void {
     if (validateFile(e.target.files?.[0] as File)) {
+      const ref = inputRef as React.MutableRefObject<HTMLInputElement>
+      ref.current.value = ''
+      setImage(undefined)
+      unregister('image' as Path<Profile>)
       setError(validateFile(e.target.files?.[0] as File))
       return
     }
     setImage(e.target.files as FileList)
   }
 
-  function onClickCancel(): void {
+  function onUploadCancel(): void {
+    const ref = inputRef as React.MutableRefObject<HTMLInputElement>
+    ref.current.value = ''
     setImage(undefined)
     unregister('image' as Path<Profile>)
-
-    const imageInput = document.querySelector(
-      'input[type="file"]',
-    ) as HTMLInputElement
-    imageInput.value = ''
   }
 
   return (
@@ -64,9 +72,7 @@ export function ImageUploader({
       )}
       <DropImageZone
         image={image as FileList}
-        setImage={setImage as React.Dispatch<React.SetStateAction<FileList>>}
-        setValue={setValue}
-        setError={setError}
+        inputRef={inputRef as React.MutableRefObject<HTMLInputElement>}
       >
         <PhotoIcon
           className="mx-auto size-12 text-gray-300"
@@ -79,9 +85,16 @@ export function ImageUploader({
               type="file"
               className="sr-only"
               accept="image/*"
-              {...register('image' as Path<Profile>, { required: true })}
+              onChange={(e) => {
+                onChange(e)
+                onUpload(e)
+              }}
+              ref={(element) => {
+                ref(element)
+                inputRef.current = element as HTMLInputElement
+              }}
+              {...rest}
               alt="Upload Image"
-              onChange={(e) => onClickUpload(e)}
               required={true}
             />
           </label>
@@ -93,7 +106,7 @@ export function ImageUploader({
       </DropImageZone>
       <button
         type="button"
-        onClick={onClickCancel}
+        onClick={onUploadCancel}
         className="btn btn-error w-max place-self-center"
         disabled={!image}
       >
@@ -107,15 +120,11 @@ export function ImageUploader({
 function DropImageZone({
   children,
   image,
-  setImage,
-  setValue,
-  setError,
+  inputRef,
 }: {
   children: React.ReactNode
   image: FileList
-  setImage: React.Dispatch<React.SetStateAction<FileList>>
-  setValue: UseFormSetValue<Profile>
-  setError: React.Dispatch<React.SetStateAction<string>>
+  inputRef: React.MutableRefObject<HTMLInputElement>
 }): React.JSX.Element {
   const [isHoverd, setIsHoverd] = useState<boolean>(false)
 
@@ -131,12 +140,8 @@ function DropImageZone({
     e.preventDefault()
     setIsHoverd(false)
 
-    if (validateFile(e.dataTransfer.files[0])) {
-      setError(validateFile(e.dataTransfer.files[0]))
-      return
-    }
-    setValue('image', e.dataTransfer.files)
-    setImage(e.dataTransfer.files)
+    inputRef.current.files = e.dataTransfer.files
+    inputRef.current.dispatchEvent(new Event('change', { bubbles: true }))
   }
 
   return (
@@ -153,14 +158,4 @@ function DropImageZone({
       {children}
     </div>
   )
-}
-
-function validateFile(file: File): string {
-  if (file.size > MAX_UPLOAD_SIZE) {
-    return 'ファイルサイズは最大5MBです'
-  }
-  if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
-    return '不正なファイル形式です'
-  }
-  return ''
 }
