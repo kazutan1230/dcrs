@@ -1,3 +1,22 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.scroll-up {
+  animation: scroll-up 1.5s infinite;
+}
+
+.rotate-z {
+  animation: rotate-z 2s infinite;
+}
+
+@keyframes scroll-up {
+  0% { transform: translate(0); }
+  20% { transform: translateY(-8px); }
+  40% { transform: translate(0); }
+}
+
+@keyframes rotate-z {
+  0% { transform: rotateZ(0deg); }
+  100%{ transform: rotateZ(-360deg); }
+}

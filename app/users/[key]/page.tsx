@@ -28,7 +28,7 @@ export default function ImagePage({
       </Suspense>
       <DownloadBtn />
       <Link href="/users" className="btn hover:scale-110">
-        <ArrowUturnLeftIcon className="size-6" />
+        <ArrowUturnLeftIcon className="size-6 rotate-z" />
         表に戻る
       </Link>
     </>
