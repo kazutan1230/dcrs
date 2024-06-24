@@ -7,7 +7,7 @@ import {
 
 export async function GET(
   _request: Request,
-  { params }: { params: { key: string } },
+  { params }: Readonly<{ params: { key: string } }>,
 ): Promise<Response> {
   const command: GetObjectCommand = new GetObjectCommand({
     Bucket: process.env.S3_BUCKET || TEST_BUCKET,
