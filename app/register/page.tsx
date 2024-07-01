@@ -4,9 +4,16 @@ import { PingAnimation } from "@/app/components/animation/pingAnimation"
 import { AlertContext } from "@/app/components/layout/alertBox"
 import { Stepper } from "@/app/components/layout/stepper"
 import type { Alert } from "@/app/interfaces/alert"
-import type { FormItem } from "@/app/interfaces/formItem"
-import type { Profile } from "@/app/interfaces/profile"
-import { CHECKLIST } from "@/app/lib/constant"
+import type { Form, FormItem } from "@/app/interfaces/form"
+import {
+  AGREEMENT,
+  COMPANY,
+  EMAIL,
+  EMPLOYEE_ID,
+  IMAGE,
+  NAME,
+  TELEPHONE,
+} from "@/app/lib/constant"
 import {
   ArrowUturnLeftIcon,
   CheckIcon,
@@ -18,25 +25,23 @@ import { useRouter } from "next/navigation"
 import type React from "react"
 import { useActionState, useContext, useRef } from "react"
 import {
-  type Path,
   type UseFormRegister,
   type UseFormWatch,
   useForm,
 } from "react-hook-form"
 import { ImageUploader } from "./imageUploader"
 
-const COMPANIES: string[] = [
-  "オープンアップグループ",
-  "ビーネックステクノロジーズ",
-] as const
-
 export default function Register(): React.JSX.Element {
+  const companies: string[] = [
+    "オープンアップグループ",
+    "ビーネックステクノロジーズ",
+  ] as const
   const {
     formState: { isValid },
     register,
     unregister,
     watch,
-  } = useForm<Profile>()
+  } = useForm<Form>()
   const dialogRef: React.RefObject<HTMLDialogElement> =
     useRef<HTMLDialogElement>(null)
   const setAlert: React.Dispatch<React.SetStateAction<Alert>> =
@@ -78,14 +83,11 @@ export default function Register(): React.JSX.Element {
         <p className="text-center before:ml-0.5 before:text-red-500 before:content-['*']">
           は必須項目
         </p>
-        <Input
-          item={CHECKLIST.find((item) => item.name === "name") as FormItem}
-          register={register}
-        />
+        <Input item={NAME} register={register} />
         <label className="form-control w-full">
           <div className="label">
             <p className="label-text after:ml-0.5 after:text-red-500 after:content-['*']">
-              {CHECKLIST.find((item) => item.name === "company")?.value}
+              {COMPANY.value}
             </p>
           </div>
           <select
@@ -97,31 +99,20 @@ export default function Register(): React.JSX.Element {
             <option value="" disabled={true}>
               以下から１つ選択
             </option>
-            {COMPANIES.map((company) => (
+            {companies.map((company) => (
               <option key={company} value={company}>
                 {company}
               </option>
             ))}
           </select>
         </label>
-        <Input
-          item={
-            CHECKLIST.find((item) => item.name === "employeeId") as FormItem
-          }
-          register={register}
-        />
-        <Input
-          item={CHECKLIST.find((item) => item.name === "telephone") as FormItem}
-          register={register}
-        />
-        <Input
-          item={CHECKLIST.find((item) => item.name === "email") as FormItem}
-          register={register}
-        />
+        <Input item={EMPLOYEE_ID} register={register} />
+        <Input item={TELEPHONE} register={register} />
+        <Input item={EMAIL} register={register} />
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body overflow-y-auto max-h-72">
             <p className="mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">
-              {CHECKLIST.find((item) => item.name === "agreement")?.value}
+              {AGREEMENT.value}
             </p>
             <p className="text-sm whitespace-pre">
               {
@@ -130,12 +121,17 @@ export default function Register(): React.JSX.Element {
             </p>
             <label className="label cursor-pointer self-center">
               <span className="label-text mr-2">同意する</span>
-              <input type="checkbox" className="checkbox" required={true} />
+              <input
+                type="checkbox"
+                className="checkbox"
+                {...register("agreement", { required: true })}
+                required={true}
+              />
             </label>
           </div>
         </div>
         <p className="after:ml-0.5 after:text-red-500 after:content-['*']">
-          {CHECKLIST.find((item) => item.name === "image")?.value}
+          {IMAGE.value}
         </p>
         <ImageUploader register={register} unregister={unregister} />
         <button
@@ -160,7 +156,7 @@ function Input({
   register,
 }: Readonly<{
   item: FormItem
-  register: UseFormRegister<Profile>
+  register: UseFormRegister<Form>
 }>): React.JSX.Element {
   const Icon = item.icon as React.ElementType
 
@@ -172,7 +168,7 @@ function Input({
       </span>
       <input
         type={item.type}
-        {...register(item.name as Path<Profile>, { required: true })}
+        {...register(item.name, { required: true })}
         placeholder={item.placeholder}
         required={true}
       />
@@ -186,9 +182,19 @@ function ConfirmDialog({
   isPending,
 }: Readonly<{
   ref: React.RefObject<HTMLDialogElement>
-  watch: UseFormWatch<Profile>
+  watch: UseFormWatch<Form>
   isPending: boolean
 }>): React.JSX.Element {
+  const form: FormItem[] = [
+    NAME,
+    COMPANY,
+    EMPLOYEE_ID,
+    TELEPHONE,
+    EMAIL,
+    AGREEMENT,
+    IMAGE,
+  ] as const
+
   return (
     <dialog ref={ref} className="modal modal-bottom sm:modal-middle">
       <div className="grid gap-4 modal-box text-center">
@@ -203,12 +209,13 @@ function ConfirmDialog({
         <Stepper targetStep={1} />
         <table className="table">
           <tbody>
-            {CHECKLIST.map(({ name, value }) => (
-              <tr key={name}>
-                <th>{value}</th>
-                <td>
-                  {name === "agreement" && "同意する"}
-                  {name === "image" && watch(name as Path<Profile>) ? (
+            {form.map((item) => (
+              <tr key={item.name} className="grid grid-cols-2">
+                <th>{item.value}</th>
+                <td className="text-center">
+                  {item.name === "agreement" ? (
+                    "同意する"
+                  ) : item.name === "image" && watch(item.name) ? (
                     <Image
                       src={document.getElementsByTagName("img")[0].src}
                       width={100}
@@ -217,7 +224,7 @@ function ConfirmDialog({
                       className="w-full"
                     />
                   ) : (
-                    (watch(name as Path<Profile>) as string)
+                    (watch(item.name) as string)
                   )}
                 </td>
               </tr>
